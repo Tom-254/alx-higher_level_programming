@@ -1,2 +1,3 @@
 - 0-run ==>	script that runs a Python script.
 - 0-run ==>	script that runs a Python script.
+- 1-run_inline ==>	script that runs Python code.
