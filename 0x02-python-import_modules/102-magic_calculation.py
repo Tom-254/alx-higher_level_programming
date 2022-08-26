@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-from dis import dis
-
 
 def magic_calculation(a, b):
     from magic_calulation_102 import add, sub
