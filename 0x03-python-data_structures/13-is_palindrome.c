@@ -1,55 +1,27 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * reverse_list - reverses a linked list
- * @head: pointer to pointer of the heade of list
+ * @head: double pointer of the list
  * Return: pointer to the first node of the reversed list
  */
+
 listint_t *reverse_list(listint_t **head)
 {
-	listint_t *prev = NULL, *current = *head, *next;
+	listint_t *forward = NULL, *prev = NULL;
 
-	while (current != NULL)
+	while (*head)
 	{
-		current->next = prev;
-		prev = current;
-		next = current->next;
-		current = next;
+		forward = (*head)->next;
+		(*head)->next = prev;
+		prev = (*head);
+		(*head) = forward;
+
 	}
-	*head = prev;
+	(*head) = prev;
 	return (*head);
 }
 
-/**
- * compare_lists - compares the values of two lists
- * @head1: pointer to head1 list
- * @head2: pointer to head2 list
- * Return: 0 for not equal and 1 for equal
- */
-
-int compare_lists(listint_t *head1, listint_t *head2)
-{
-	listint_t *temp1 = head1;
-	listint_t *temp2 = head2;
-
-	while (temp1 && temp2)
-	{
-		if (temp1->n == temp2->n)
-		{
-			temp1 = temp1->next;
-			temp2 = temp2->next;
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	if (temp1 == NULL && temp2 == NULL)
-		return (1);
-
-	return (0);
-}
 
 /**
  * is_palindrome - checks if a singly linked list is a palindrome
@@ -59,37 +31,26 @@ int compare_lists(listint_t *head1, listint_t *head2)
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *second_half, *fast_ptr = *head, *slow_ptr = *head,
-	*prev_of_slow_ptr = *head, *middle_node = NULL;
-	int equals;
+	listint_t *single = *head, *dub = *head;
 
-	if (*head != NULL && (*head)->next != NULL)
+	if (*head == NULL)
+		return (1);
+	while (dub->next && dub->next->next)
 	{
-		while (fast_ptr != NULL && fast_ptr->next != NULL)
-		{
-			fast_ptr = fast_ptr->next->next;
-			slow_ptr = slow_ptr->next;
-		}
-		if (fast_ptr != NULL)
-		{
-			middle_node = slow_ptr;
-			slow_ptr = slow_ptr->next;
-		}
-
-		second_half = slow_ptr;
-		prev_of_slow_ptr->next = NULL;
-		second_half = reverse_list(&second_half);
-		equals  = compare_lists(*head, second_half);
-
-		if (middle_node != NULL)
-		{
-			prev_of_slow_ptr->next = middle_node;
-			middle_node->next = second_half;
-		}
-		else
-		{
-			prev_of_slow_ptr->next = second_half;
-		}
+		single = single->next;
+		dub = dub->next->next;
 	}
-	return (equals);
+	single = reverse_list(&single);
+/*
+	half = single;
+*/
+	dub = *head;
+	while (single && dub)
+	{
+		if (single->n != dub->n)
+			return (0);
+		single = single->next;
+		dub = dub->next;
+	}
+	return (1);
 }
