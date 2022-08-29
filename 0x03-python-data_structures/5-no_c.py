@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from hashlib import new
-
-
 def no_c(my_string):
     new_string = ""
     for ch in my_string:
