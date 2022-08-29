@@ -1,0 +1,7 @@
+#!/bin/bash
+
+string='python.py'
+
+if [[ $string == *".py"* ]]; then
+  echo "String has substring"
+fi
