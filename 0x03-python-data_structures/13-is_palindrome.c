@@ -35,16 +35,17 @@ int is_palindrome(listint_t **head)
 
 	if (*head == NULL)
 		return (1);
+	/* Find middle */
 	while (fast_pointer->next && fast_pointer->next->next)
 	{
 		slow_ptr = slow_ptr->next;
 		fast_pointer = fast_pointer->next->next;
 	}
+	/*reverse second half*/
 	slow_ptr = reverse_list(&slow_ptr);
-/*
-	half = slow_ptr;
-*/
+
 	fast_pointer = *head;
+	/*check if reversed half matches the first half*/
 	while (slow_ptr && fast_pointer)
 	{
 		if (slow_ptr->n != fast_pointer->n)
