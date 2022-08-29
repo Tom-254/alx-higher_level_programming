@@ -78,7 +78,7 @@ int is_palindrome(listint_t **head)
 
 		second_half = slow_ptr;
 		prev_of_slow_ptr->next = NULL;
-		reverse_list(&second_half);
+		second_half = reverse_list(&second_half);
 		equals  = compare_lists(*head, second_half);
 
 		if (middle_node != NULL)
