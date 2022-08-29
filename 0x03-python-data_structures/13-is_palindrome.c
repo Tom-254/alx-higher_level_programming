@@ -1,27 +1,25 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * reverse_list - reverses a linked list
- * @head: double pointer of the list
+ * @head: pointer to pointer of the heade of list
  * Return: pointer to the first node of the reversed list
  */
-
 listint_t *reverse_list(listint_t **head)
 {
-	listint_t *forward = NULL, *prev = NULL;
+	listint_t *prev = NULL, *current = *head, *next;
 
-	while (*head)
+	while (current != NULL)
 	{
-		forward = (*head)->next;
-		(*head)->next = prev;
-		prev = (*head);
-		(*head) = forward;
-
+		current->next = prev;
+		prev = current;
+		next = current->next;
+		current = next;
 	}
-	(*head) = prev;
+	*head = prev;
 	return (*head);
 }
-
 
 /**
  * is_palindrome - checks if a singly linked list is a palindrome
@@ -31,26 +29,27 @@ listint_t *reverse_list(listint_t **head)
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *single = *head, *dub = *head;
+	listint_t *slow_ptr = *head, *fast_ptr = *head;
 
 	if (*head == NULL)
 		return (1);
-	while (dub->next && dub->next->next)
+	/*Find Middle */
+	while (fast_ptr->next && fast_ptr->next->next)
 	{
-		single = single->next;
-		dub = dub->next->next;
+		slow_ptr = slow_ptr->next;
+		fast_ptr = fast_ptr->next->next;
 	}
-	single = reverse_list(&single);
-/*
-	half = single;
-*/
-	dub = *head;
-	while (single && dub)
+	/*reverse from middle*/
+	slow_ptr = reverse_list(&slow_ptr);
+
+	/*compare both */
+	fast_ptr = *head;
+	while (slow_ptr && fast_ptr)
 	{
-		if (single->n != dub->n)
+		if (slow_ptr->n != fast_ptr->n)
 			return (0);
-		single = single->next;
-		dub = dub->next;
+		slow_ptr = slow_ptr->next;
+		fast_ptr = fast_ptr->next;
 	}
 	return (1);
 }
