@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from distutils.archive_util import make_zipfile
-
-
 def max_integer(my_list=[]):
     if not my_list:
         return None
