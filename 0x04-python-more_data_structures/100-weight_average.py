@@ -10,6 +10,7 @@ def weight_average(my_list=[]):
         return (score_total / weighted_sum)
     return 0
 
+
 if __name__ == "__main__":
     my_list = [(1, 2), (2, 1), (3, 10), (4, 2)]
     # = ((1 * 2) + (2 * 1) + (3 * 10) + (4 * 2)) / (2 + 1 + 10 + 2)
