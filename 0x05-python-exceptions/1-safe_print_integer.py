@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 
+from cmath import exp
+
+
 def safe_print_integer(value):
     try:
         print("{:d}".format(value))
         return True
-    except:
+    except Exception as e:
         return False
 
 
