@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from multiprocessing.sharedctypes import Value
-
-
 def safe_print_integer(value):
     try:
         print("{:d}".format(value))
