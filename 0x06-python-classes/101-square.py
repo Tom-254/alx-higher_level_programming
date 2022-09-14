@@ -86,9 +86,18 @@ class Square:
     def __str__(self):
         """prints the square representation
         """
-        if self.size == 0:
+        string = ""
+        if self.__size == 0:
             return ""
-        string = "\n" * self.position[1] + (" " * self.position[0] + "#" * self.size + "\n") * self.size
+        else:
+            if self.__position[1] > 0:
+                string += "\n" * self.position[1]
+
+            for i in range(self.__size):
+                if self.__position[0] > 0:
+                    string += " " * self.__position[0]
+                string += "#" * self.__size
+                string += "\n"
         return string[:-1]
 
 
