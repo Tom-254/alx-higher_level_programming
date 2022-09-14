@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """Defines SinglyLinkedList classes"""
 
+
 class Node():
     """Describes Node class for singlyLinkedList"""
+
     def __init__(self, data, next_node=None):
         """Initialize the Node class instance attributes
             Args:
@@ -51,6 +53,7 @@ class SinglyLinkedList():
     """
        Creates a SinglyLinkedList
     """
+
     def __init__(self):
         self.__head = None
 
@@ -89,4 +92,3 @@ class SinglyLinkedList():
             print(tmp.data)
             tmp = tmp.next_node
         return (str(tmp.data))
-
