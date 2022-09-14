@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-
-from signal import raise_signal
-from typing import Type
-
+"""Defines Square class"""
 
 class Square:
     """Square representation"""
