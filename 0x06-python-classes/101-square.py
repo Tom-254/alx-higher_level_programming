@@ -86,7 +86,8 @@ class Square:
     def __str__(self):
         """prints the square representation
         """
-        return self.my_print()
+        self.my_print()
+        return ""
 
 
 if __name__ == "__main__":
