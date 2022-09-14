@@ -84,25 +84,3 @@ class Square:
                     print(" " * self.__position[0], end='')
                 print("#" * self.__size, end='')
                 print()
-
-
-if __name__ == "__main__":
-
-    my_square_1 = Square(3)
-    my_square_1.my_print()
-
-    print("--")
-
-    try:
-
-        my_square_2 = Square(3, (1, "hel"))
-        my_square_2.my_print()
-
-        print("--")
-
-        my_square_3 = Square(3, (3, 0))
-        my_square_3.my_print()
-    except Exception as e:
-        print(e)
-
-    print("--")
