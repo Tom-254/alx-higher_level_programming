@@ -23,6 +23,7 @@ class Square:
         """
         return (self.__size ** 2)
 
+
 if __name__ == "__main__":
     my_square_1 = Square(3)
     print("Area: {}".format(my_square_1.area()))

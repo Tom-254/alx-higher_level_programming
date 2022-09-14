@@ -39,6 +39,7 @@ class Square:
         """
         return (self.__size ** 2)
 
+
 if __name__ == "__main__":
 
     my_square = Square(89)

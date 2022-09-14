@@ -50,6 +50,7 @@ class Square:
                 print("#" * self.__size, end='')
                 print()
 
+
 if __name__ == "__main__":
 
     my_square = Square(3)
