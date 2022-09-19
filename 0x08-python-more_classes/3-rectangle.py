@@ -74,23 +74,6 @@ class Rectangle:
         else:
             return 2 * (self.__width + self.__height)
 
-    def area(self):
-        """ Calculates area of rectangle area (h * w)
-            Returns:
-                int: Rectangle area calculated
-        """
-        return self.__height * self.__width
-
-    def perimeter(self):
-        """ Calculates perimeter of rectangle perimeter 2 * (h + w)
-            Returns:
-                int: Rectangle perimeter calculated
-        """
-        if self.__width == 0 or self.__height == 0:
-            return 0
-        else:
-            return 2 * (self.__width + self.__height)
-
     def __str__(self):
         """Called to return a string represention of
            the rectangle when printed
