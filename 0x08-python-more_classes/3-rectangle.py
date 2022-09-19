@@ -8,8 +8,8 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Initializes the instance attributes to create a rectangle
             Args:
-                width: size of the square
-                height: height of rectangle
+                width (int): size of the square
+                height (int): height of rectangle
         """
 
         self.width = width
@@ -27,7 +27,7 @@ class Rectangle:
     def width(self, value):
         """Sets the width of the rectangle
         Args:
-            int: value to set as width
+            value (int): value to set as width
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -48,7 +48,7 @@ class Rectangle:
     def height(self, value):
         """Sets the width of the rectangle
         Args:
-            int: value to set as width
+            value (int): value to set as width
         """
 
         if not isinstance(value, int):
