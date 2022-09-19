@@ -80,6 +80,8 @@ class Rectangle:
            Returns:
                 str: Representation of the rectangel using (#) symbol
         """
+        if self.__width == 0 or self.__height == 0:
+            return ""
         return (("#" * self.__width + "\n") * self.__height)[:-1]
 
 
