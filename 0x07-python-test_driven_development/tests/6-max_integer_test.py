@@ -68,6 +68,5 @@ class TestMaxInteger(unittest.TestCase):
         mixed = [1, 2, 3, "neat", 5]
         self.assertRaises(TypeError, max_integer, mixed)
 
-
 if __name__ == '__main__':
     unittest.main()

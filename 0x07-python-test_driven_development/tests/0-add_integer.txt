@@ -1,94 +1,82 @@
-The ``0-add_integer`` module
+======================
+0-add_integer function
 ======================
 
-Using ``add_integer``
--------------------
+This function takes two integers and adds them together and returns the sum. It is called by add_integer(a, b=98).
 
-This is an 0-add_integer module test text file in reStructuredText format.  First import
-``add_integer`` from the ``0-add_integer`` module:
+Import the function:
+    >>> add_integer = __import__('0-add_integer').add_integer
 
-    >>> from 0-add_integer import add_integer
+Adds two integers:
+    >>> add_integer(5, 7)
+    12
 
-Checks module docstring:
-	>>> m = add_integer.__doc__
-	>>> len(m) > 1
-	True
+Adds two floats:
+    >>> add_integer(12.2, 15.6)
+    27
 
-Checks function docstring:
-	>>> f = add_integer.add_integer.__doc__
-        >>> len(f) > 1
-        True
-
-Adding two integers:
-    >>> add_integer(2, 3)
-    5
-
-Adding two floats:
-    >>> add_integer(3.2, 2.2)
-    5
-
-Adding an integer and a float:
-    >>> add_integer(4, 3.3)
+Adds an integer and a float:
+    >>> add_integer(5, 2.7)
     7
 
-Adding a float and an integer:
-    >>> add_integer(8.5, 2)
-    10
+Adds a float and an integer:
+    >>> add_integer(5.7, 2)
+    7
 
-Adding two negative integers:
-    >>> add_integer(-2, -3)
-    -5
+Adds two negative integers:
+    >>> add_integer(-7, -1)
+    -8
 
-Adding a positive integer and a negative integer:
-    >>> add_integer(1, -2)
+Adds a positive integer and a negative integer:
+    >>> add_integer(2, -3)
     -1
 
-Adding a negative integer and a positive integer:
-    >>> add_integer(-2, 5)
-    3
+Adds a negative integer and a positive integer:
+    >>> add_integer(-3, 4)
+    1
 
-Adding a string and an integer or float:
-    >>> add_integer("k", 8)
+Adds a string and an integer or float:
+    >>> add_integer("wrong", 5)
     Traceback (most recent call last):
-        ...
+    	      ...
     TypeError: a must be an integer
 
-Adding an integer and a string:
-    >>> add_integer(9, "y")
+Adds an integer and a string:
+    >>> add_integer(6, "nope")
     Traceback (most recent call last):
-        ...
+    	      ...
     TypeError: b must be an integer
 
-Adding two strings:
-    >>> add_integer("k", "y")
+Adds two strings:
+    >>> add_integer("wrong", "nope")
     Traceback (most recent call last):
-        ...
+    	      ...
     TypeError: a must be an integer
 
 Takes in one argument:
-    >>> add_integer(5)
-    103
+     >>> add_integer(5)
+     103
 
 Takes in no arguments:
-    >>> add_integer()
-    Traceback (most recent call last):
-    	...
-    TypeError: add_integer() missing 1 required positional argument: 'a'
+     >>> add_integer()
+     Traceback (most recent call last):
+     		...
+     TypeError: add_integer() missing 1 required positional argument: 'a'
 
 Takes in None:
-    >>> add_integer(None)
-    Traceback (most recent call last):
-    	...
-    TypeError: a must be an integer
+     >>> add_integer(None)
+     Traceback (most recent call last):
+     		...
+     TypeError: a must be an integer
 
 Take in infinity:
-    >>> add_integer(float('inf'))
-    Traceback (most recent call last):
-    	...
-    OverflowError: cannot convert float infinity to integer
+     >>> add_integer(float('inf'))
+     Traceback (most recent call last):
+     		...
+     OverflowError: cannot convert float infinity to integer
 
 Passing in NaN:
-    >>> add_integer(float('NaN'))
-    Traceback (most recent call last):
-    	...
-    ValueError: cannot convert float NaN to integer
+     >>> add_integer(float('nan'))
+     Traceback (most recent call last):
+     		...
+     ValueError: cannot convert float NaN to integer

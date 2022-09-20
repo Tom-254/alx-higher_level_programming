@@ -1,5 +1,6 @@
-"""This module holds the function matrix_divided which takes in a matrix
-and divides each element by 3
+#!/usr/bin/python3
+"""Contains function matrix_divided takes in a matrix
+and divides each element by div
 """
 
 
@@ -15,24 +16,24 @@ def matrix_divided(matrix, div):
     row_check = 0
     if not any(matrix):
         raise TypeError("matrix must be a matrix (list of lists) of\
-                        integers/floats")
-    if not isinstance(matrix, list):
+ integers/floats")
+    if type(matrix) is not list:
         raise TypeError("matrix must be a matrix (list of lists) of\
-                        integers/floats")
+ integers/floats")
     if matrix[0] is not None:
         row_check = len(matrix[0])
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    if not isinstance(div, int) and not isinstance(div, float):
+    if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     for row in matrix:
-        if not isinstance(row, list):
+        if type(row) is not list:
             raise TypeError("matrix must be a matrix (list of lists) of\
-                            integers/floats")
+ integers/floats")
         for num in row:
-            if not isinstance(num, int) and not isinstance(num, float):
+            if type(num) is not int and type(num) is not float:
                 raise TypeError("matrix must be a matrix (list of lists) of\
-                                integers/floats")
+ integers/floats")
         if len(row) != row_check:
             raise TypeError("Each row of the matrix must have the same size")
 
