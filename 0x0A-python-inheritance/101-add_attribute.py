@@ -3,12 +3,12 @@
 """
 
 
-def add_attribute(cls, name, first):
+def add_attribute(obj, name, value):
     """Assigns new attributes if not already assigned
         Args:
             name (str): name of the attribute to insert
-            first (any): value of the attribute to insert
+            value (any): value of the attribute to insert
     """
-    if hasattr(cls, name):
+    if hasattr(obj, "__dict__"):
         raise TypeError("can't add new attribute")
-    cls.name = first
+    setattr(obj, name, value)
