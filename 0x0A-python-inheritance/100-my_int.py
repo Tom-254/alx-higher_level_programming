@@ -12,7 +12,7 @@ class MyInt(int):
         Args:
             num (int): int that's passed through
         """
-
+        super().__init__()
         self.num = num
 
     def __eq__(self, value):
