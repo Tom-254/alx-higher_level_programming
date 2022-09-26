@@ -2,17 +2,12 @@
 """
 Holds the class superclass BaseGeometry
 """
+Base = __import__('6-base_geometry').BaseGeometry
 
 
-class BaseGeometry:
+class BaseGeometry(Base):
     """BaseGeometry class containing area and integer_validator
     """
-
-    def area(self):
-        """Raises and exception when called
-        """
-
-        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """Validates input passed to match conditions provided
