@@ -2,6 +2,7 @@
 """Module inherits from int
 """
 
+
 class MyInt(int):
     """Inherits from int but inverting == and !=
     """
