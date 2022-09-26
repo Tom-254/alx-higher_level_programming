@@ -7,6 +7,7 @@ Holds the class superclass BaseGeometry
 class BaseGeometry:
     """BaseGeometry class containing area and integer_validator
     """
+
     def __init__(self):
         """Initializes the class
         """
