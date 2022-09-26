@@ -9,6 +9,6 @@ def add_attribute(cls, name, first):
             name (str): name of the attribute to insert
             first (any): value of the attribute to insert
     """
-    if not hasattr(cls, name):
+    if hasattr(cls, name):
         raise TypeError("can't add new attribute")
     cls.name = first
