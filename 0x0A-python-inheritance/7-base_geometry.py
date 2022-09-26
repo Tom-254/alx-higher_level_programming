@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-Module that holds the class BaseGeometry
+Holds the class superclass BaseGeometry
 """
 
 
-class BaseGeometry:
+class BaseGeometry(object):
     """BaseGeometry class containing area and integer_validator
     """
 
