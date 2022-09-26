@@ -2,9 +2,8 @@
 """Module inherits from int
 """
 
-
 class MyInt(int):
-    """Inherits from int but Inverting == and !=
+    """Inherits from int but inverting == and !=
     """
 
     def __init__(self, num):
@@ -12,7 +11,7 @@ class MyInt(int):
         Args:
             num (int): int that's passed through
         """
-        super().__init__()
+
         self.num = num
 
     def __eq__(self, value):
@@ -21,7 +20,8 @@ class MyInt(int):
                 bool: true or false
         """
 
-        return (self.number != value)
+        if not isinstance(value, MyInt):
+            return False
 
     def __ne__(self, value):
         """Inverts != to ==
@@ -29,4 +29,5 @@ class MyInt(int):
                 bool: true or false
         """
 
-        return (self.number == value)
+        if not isinstance(value, MyInt):
+            return True
