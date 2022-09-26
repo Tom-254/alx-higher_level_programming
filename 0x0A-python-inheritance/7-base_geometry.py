@@ -5,19 +5,17 @@ Module that holds the class BaseGeometry
 
 
 class BaseGeometry:
-    """BaseGeometry class
+    """BaseGeometry class containing area and integer_validator
     """
 
     def area(self):
-        """Calculates the area
-            Returns:
-                float: area
+        """Raises and exception when called
         """
 
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Validates input
+        """Validates input passed to match conditions provided
         """
 
         if type(value) is not int:
