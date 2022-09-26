@@ -8,11 +8,6 @@ class BaseGeometry:
     """BaseGeometry class containing area and integer_validator
     """
 
-    def __init__(self):
-        """Initializes the class
-        """
-        pass
-
     def area(self):
         """Raises and exception when called
         """
