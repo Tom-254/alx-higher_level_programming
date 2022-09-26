@@ -7,8 +7,6 @@ class BaseGeometry:
     """Geometry Class
     """
 
-    pass
-
     def area(self):
         """Calculates the area
             Returns:
