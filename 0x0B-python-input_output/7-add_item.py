@@ -1,16 +1,23 @@
 #!/usr/bin/python3
-"""
-adds all arguments to a Python list
+""" adds all arguments to a Python
+    list, and then save them to a file:
 """
 import sys
+import os
+save_to_json = __import__("5-save_to_json_file").save_to_json_file
+load_from_json = __import__("6-load_from_json_file").load_from_json_file
 
 
-save = __import__('5-save_to_json_file').save_to_json_file
-load = __import__('6-load_from_json_file').load_from_json_file
+def add_item(args, filename):
+    if (os.path.exists(filename)):
+        content = load_from_json(filename)
+    else:
+        content = []
+    content.extend(args)
+    save_to_json(content, filename)
 
-open("add_item.json", "a")
-try:
-    i = load("add_item.json")
-except ValueError:
-    i = []
-save(i + sys.argv[1:], "add_item.json")
+
+if __name__ == "__main__":
+    args = sys.argv[1:]
+    filename = "add_item.json"
+    add_item(args, filename)
