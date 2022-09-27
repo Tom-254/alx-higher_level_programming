@@ -9,9 +9,9 @@ load_from_json = __import__("6-load_from_json_file").load_from_json_file
 
 
 def add_item(args, filename):
-    if (os.path.exists(filename)):
+    try:
         content = load_from_json(filename)
-    else:
+    except:
         content = []
     for item in args:
         content.append(item)
