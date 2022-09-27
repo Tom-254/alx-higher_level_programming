@@ -13,7 +13,8 @@ def add_item(args, filename):
         content = load_from_json(filename)
     else:
         content = []
-    content.extend(args)
+    for item in args:
+        content.append(item)
     save_to_json(content, filename)
 
 
