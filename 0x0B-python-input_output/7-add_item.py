@@ -12,9 +12,9 @@ def add_item(args, filename):
     """ adds all arguments to a Python
         list, and then save them to a file:
     """
-    if (os.path.exists(filename)):
+    try:
         content = load_from_json(filename)
-    else:
+    except:
         content = []
     for item in args:
         content.append(item)
