@@ -18,6 +18,4 @@ def add_item(args, filename):
 
 
 if __name__ == "__main__":
-    args = sys.argv[1:]
-    filename = "add_item.json"
-    add_item(args, filename)
+    add_item(sys.argv[1:], "add_item.json")
