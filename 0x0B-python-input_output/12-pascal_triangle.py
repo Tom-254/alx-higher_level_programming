@@ -17,6 +17,6 @@ def pascal_triangle(n):
         row = []
         for i in range(1, line + 1):
             row.append(C)
-            C = (C * (line - i)) // i
+            C = C * (line - i) // i
         p_list.append(row)
     return p_list
