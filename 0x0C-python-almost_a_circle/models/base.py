@@ -19,6 +19,7 @@ class Base:
         else:
             self.id = id
 
+    @staticmethod
     def type_validator(attribute, value):
         """Validates the inputs passed"""
         if type(value) != int:

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Module containing the rectangle class
 """
-from models.base import Base
+from base import Base
 
 class Rectangle(Base):
     """Class represention of a rectangle
@@ -10,7 +10,7 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes the Rectangle class attributes
         """
-        Base.__init__(id)
+        Base.__init__(self, id)
         self.width = width
         self.height = height
         self.x = x
@@ -123,3 +123,14 @@ class Rectangle(Base):
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(10, 2)
+    print(r1.id)
+
+    r2 = Rectangle(2, 10)
+    print(r2.id)
+
+    r3 = Rectangle(10, 2, 0, 0, 12)
+    print(r3.id)
