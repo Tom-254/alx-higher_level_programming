@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Module containing the rectangle class
 """
-from base import Base
+from models.base import Base
 
 class Rectangle(Base):
     """Class represention of a rectangle
