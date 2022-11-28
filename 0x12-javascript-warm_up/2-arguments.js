@@ -1,11 +1,9 @@
 #!/usr/bin/node
-let x = 0;
-process.argv.forEach((val, index) => {
-  x++;
-  if (index === 2) {
-    console.log(`${val}`);
-  }
-});
-if (x <= 2) {
+
+if (process.argv.length === 2) {
   console.log('No argument');
+} else if (process.argv.length === 3) {
+  console.log('Argument found');
+} else {
+  console.log('Arguments found');
 }
