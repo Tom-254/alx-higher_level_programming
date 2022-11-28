@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const x = process.argv[2];
-if (isNaN(x) === true) {
-  console.log('Not a number');
+
+if (+process.argv[2]) {
+  console.log(`My number: ${+process.argv[2]}`);
 } else {
-  console.log('My number: ' + x);
+  console.log('Not a number');
 }
