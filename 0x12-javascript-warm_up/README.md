@@ -1,1 +1,1 @@
-# ALX Programme Project: 0x0C. Python - Almost a circle
+# ALX Programme Project: 0x12. JavaScript - Warm up
