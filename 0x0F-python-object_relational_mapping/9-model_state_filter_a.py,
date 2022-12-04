@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Script that lists all states from the database """
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine

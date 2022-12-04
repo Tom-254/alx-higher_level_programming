@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Script that lists all states from the database """
 import sys
 from relationship_state import State, Base
 from relationship_city import City
