@@ -13,6 +13,6 @@ if __name__ == '__main__':
     info = (username, token)
     res = requests.get(url, auth=info)
     try:
-        print(res.json()['id'])
+        print(res.json().get('id'))
     except Exception:
         print('None')
