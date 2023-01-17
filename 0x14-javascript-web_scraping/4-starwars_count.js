@@ -2,15 +2,17 @@
 
 const request = require('request');
 const url = process.argv[2];
-request.get(url, function (err, response, body) {
-  let count = 0;
-  if (err) {
-    console.log(err);
+request.get(url, function (error, response, body) {
+  if (error) {
+    console.error(error);
   }
-  const data = JSON.parse(body);
-  for (let i = 0; data.results[i] !== undefined; i++) {
-    if (data.results[i].characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
-      count++;
+  const path = JSON.parse(body).results;
+  let count = 0;
+  for (let i = 0; i < path.length; i++) {
+    for (let j = 0; j < path[i].characters.length; j++) {
+      if (path[i].characters[j].endsWith('18/')) {
+        count++;
+      }
     }
   }
   console.log(count);
