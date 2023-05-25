@@ -1,20 +1,23 @@
 #!/bin/bash
-allThreads=("0-print_list_integer.py" "1-element_at.py" "2-replace_in_list.py" "3-print_reversed_list_integer.py" "4-new_in_list.py" "5-no_c.py" "6-print_matrix_integer.py" "7-add_tuple.py" "8-multiple_returns.py" "9-max_integer.py" "10-divisible_by_2.py" "11-delete_at.py" "12-switch.py" "13-is_palindrome.c" "lists.h" "100-print_python_list_info.c")
+allThreads=("0-script.js" "1-script.js" "2-script.js" "3-script.js" "4-script.js" "5-script.js" "6-script.js" "7-script.js" "8-script.js" "9-script.js" "100-script.js" "101-script.js" "102-script.js" "103-script.js")
 
-mkdir -p "0x03-python-data_structures"
+mkdir -p "0x15-javascript-web_jquery"
 
 for t in ${allThreads[@]}; do
 
     if [[ $t == *".py"* ]]; then
-        echo -e "#!/usr/bin/python3\n" > "./0x03-python-data_structures/$t" && chmod +x "./0x03-python-data_structures/$t"
+        echo -e "#!/usr/bin/python3\n" > "./0x15-javascript-web_jquery/$t" && chmod +x "./0x15-javascript-web_jquery/$t"
     else
-        touch "./0x03-python-data_structures/$t"
+        # echo -e "#!/usr/bin/node\n" > "./0x15-javascript-web_jquery/$t"
+        touch "./0x15-javascript-web_jquery/$t"
     fi
 
 done
 
-echo -e "# ALX Programme Project: 0x03. Python - Data Structures: Lists, Tuples" > "./0x03-python-data_structures/README.md"
+echo -e "# ALX Programme Project: 0x14. JavaScript - Web scraping" > "./0x15-javascript-web_jquery/README.md"
 
-cp "0x01-python-if_else_loops_functions/correction" "./0x03-python-data_structures/"
+echo -e "#!/bin/bash\ngit add . && git commit -m '0x15. JavaScript - Web jQuery" > "./0x15-javascript-web_jquery/correction" && chmod +x "./0x15-javascript-web_jquery/correction"
 
-cd /root/alx-higher_level_programming/0x03-python-data_structures
+cp "../alx-higher_level_programming/0x05-python-exceptions/clean_up_corrections" "./0x15-javascript-web_jquery/"
+
+cd ./0x15-javascript-web_jquery

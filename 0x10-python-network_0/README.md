@@ -1,7 +1,7 @@
 # 0x10. Python - Network #0
 
 ## Resources
-* [HTTP (HyperText Transfer Protocol)](https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/http_basics.html)(except: “TRACE” Request Method, “CONNECT” Request Method, Language Negotiation and “Options MultiView” and Character Set Negotiation)
+* [HTTP (HyperText Transfer Protocol)](https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/http_basics.html)(except Exception as ex: “TRACE” Request Method, “CONNECT” Request Method, Language Negotiation and “Options MultiView” and Character Set Negotiation)
 * [HTTP Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 * [Using cURL to debug](https://intranet.hbtn.io/concepts/51)
 
@@ -25,7 +25,7 @@ Please test your script in the container provided, using the web server running 
 ```
 guillaume@ubuntu:~/0x10$ ./0-body_size.sh 0.0.0.0:5000
 10
-guillaume@ubuntu:~/0x10$ 
+guillaume@ubuntu:~/0x10$
 ```
 
 File: `0-body_size.sh`
@@ -69,7 +69,7 @@ Please test your script in the container provided, using the web server running 
 ```
 guillaume@ubuntu:~/0x10$ ./3-methods.sh 0.0.0.0:5000/route_4
 OPTIONS, HEAD, PUT
-guillaume@ubuntu:~/0x10$ 
+guillaume@ubuntu:~/0x10$
 ```
 
 File: `3-methods.sh`
@@ -84,7 +84,7 @@ Please test your script in the container provided, using the web server running 
 ```
 guillaume@ubuntu:~/0x10$ ./4-header.sh 0.0.0.0:5000/route_5 ; echo ""
 Hello Holberton School!
-guillaume@ubuntu:~/0x10$ 
+guillaume@ubuntu:~/0x10$
 ```
 
 File: `4-header.sh`
@@ -102,7 +102,7 @@ guillaume@ubuntu:~/0x10$ ./5-post_params.sh 0.0.0.0:5000/route_6 ; echo ""
 POST params:
     email: hr@holbertonschool.com
     subject: I will always be here for PLD
-guillaume@ubuntu:~/0x10$ 
+guillaume@ubuntu:~/0x10$
 ```
 
 File: `5-post_params.sh`
@@ -140,9 +140,9 @@ guillaume@ubuntu:~/0x10$ ./6-main.py
 None
 2
 4
-guillaume@ubuntu:~/0x10$ wc -l 6-peak.txt 
+guillaume@ubuntu:~/0x10$ wc -l 6-peak.txt
 2 6-peak.txt
-guillaume@ubuntu:~/0x10$ 
+guillaume@ubuntu:~/0x10$
 ```
 
 File: `6-peak.py, 6-peak.txt`
